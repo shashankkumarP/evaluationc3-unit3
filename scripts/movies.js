@@ -54,18 +54,18 @@ const debounce = (ft,delay) =>{
     },delay)
 }
 
-// class br{
-//     constructor(Poster,Title,Type,Year,imdbID){
-//         this.Title = Title;
-//         this.Poster = Poster;
-//         this.Type = Type;
-//         this.Year =Year;
-//         this.imdbID = imdbID;
-//     }
-// }
+class br{
+    constructor(Poster,Title,Type,Year,imdbID){
+        this.Title = Title;
+        this.Poster = Poster;
+        this.Type = Type;
+        this.Year =Year;
+        this.imdbID = imdbID;
+    }
+}
 
 let my1 = (Poster,Title,Type,Year,imdbID) =>{
-    let obj={Poster:Poster,Title:Title,Type:Type,Year:Year,imdbID:imdbID}
+    let obj = new br(Poster,Title,Type,Year,imdbID)
     
     
     localStorage.setItem("movie",JSON.stringify(obj));

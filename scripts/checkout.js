@@ -3,7 +3,7 @@
 // Else show "Booking successfull!" and adjust the wallet amount in real time
 
 let wal = localStorage.getItem("amount");
-let movie = localStorage.getItem("movie");
+let moviee = JSON.parse(localStorage.getItem("movie"));
 let a = (amount)=>{
     document.getElementById("wallet").innerText=null;
     document.getElementById("wallet").innerText= amount;
@@ -16,10 +16,10 @@ a(wal);
     
 
 let p1 = document.createElement("p");
-p1.innerText=movie.Title;
+p1.innerText=moviee.Title;
 
 let im = document.createElement("img");
-im.src = movie.Poster;
+im.src = moviee.Poster;
 im.style.width="250px";
 im.style.height= "250px";
 document.getElementById("movie").append(p1,im);
